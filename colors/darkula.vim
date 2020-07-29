@@ -86,13 +86,14 @@ let g:terminal_color_15 = g:darkula_color_map.white
 " -----------------------------------------------------------------------------
 "
 function! s:highlight(group, fg, bg, attr)
-	exec "hi " . a:group . " ctermfg=" . g:darkula_term_color_map[a:fg]
-	exec "hi " . a:group . " ctermbg=" . g:darkula_term_color_map[a:bg]
-	exec "hi " . a:group . " cterm=" . a:attr
-	exec "hi " . a:group . " guifg=" . g:darkula_color_map[a:fg]
-	exec "hi " . a:group . " guibg=" . g:darkula_color_map[a:bg]
-	exec "hi " . a:group . " gui=" . a:attr
-	exec "hi " . a:group . " guisp=NONE"
+	exec "highlight! " . a:group
+	\. " ctermfg=" . g:darkula_term_color_map[a:fg]
+	\. " ctermbg=" . g:darkula_term_color_map[a:bg]
+	\. " cterm=" . a:attr
+	\. " guifg=" . g:darkula_color_map[a:fg]
+	\. " guibg=" . g:darkula_color_map[a:bg]
+	\. " gui=" . a:attr
+	\. " guisp=NONE"
 endfunction
 
 " Basic Highlighting
