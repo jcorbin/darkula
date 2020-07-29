@@ -193,8 +193,8 @@ call s:highlight("FoldColumn",  "lighter_grey",  g:darkula_ui_bg,   "NONE")
 call s:highlight("Folded",      "lighter_grey",  g:darkula_buf_bg,  "NONE")
 
 " Menus
-call s:highlight("WildMenu",    "white",  g:darkula_ui_bg,  "NONE")
-call s:highlight("SignColumn",  "none",   g:darkula_ui_bg,  "NONE")
+call s:highlight("WildMenu",    g:darkula_ui_fg,  g:darkula_ui_bg,  "NONE")
+call s:highlight("SignColumn",  "none",           g:darkula_ui_bg,  "NONE")
 
 " Errors and warnings
 call s:highlight("Error",       "red",      "none",  "NONE")
