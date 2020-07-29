@@ -153,7 +153,14 @@ call s:highlight("Ignore",        "none",            "none",          "NONE")
 call s:highlight("SpecialKey",    "blue",            "none",          "NONE")
 
 " Cursor
-call s:highlight("Cursor",        "none",            "dark_grey",     "REVERSE")
+call s:highlight("Cursor",        s:focus_bg,        "blue",          "NONE")
+call s:highlight("nCursor",       s:focus_bg,        "blue",          "NONE")
+call s:highlight("lCursor",       s:focus_bg,        "bright_purple", "NONE")
+call s:highlight("iCursor",       s:focus_bg,        "dark_sea_green", "NONE")
+call s:highlight("rCursor",       s:focus_bg,        "red_orange",    "NONE")
+call s:highlight("vCursor",       s:focus_bg,        "yellow",        "NONE")
+call s:highlight("cCursor",       s:focus_bg,        "white",         "NONE")
+
 call s:highlight("CursorLine",    "none",            s:focus_bg,      "NONE")
 call s:highlight("ColorColumn",   "none",            s:focus_bg,      "NONE")
 call s:highlight("CursorColumn",  "none",            s:focus_bg,      "NONE")
