@@ -85,7 +85,12 @@ let g:terminal_color_15 = g:darkula_color_map.white
 " Utility
 " -----------------------------------------------------------------------------
 "
-function! s:highlight(group, fg, bg, attr)
+function! s:highlight(group, fg, bg, attr, ...)
+  if a:0 > 0
+    let l:sp = g:darkula_color_map[a:1]
+  else
+    let l:sp = "NONE"
+  endif
   exec "highlight! " . a:group
     \. " ctermfg=" . g:darkula_term_color_map[a:fg]
     \. " ctermbg=" . g:darkula_term_color_map[a:bg]
@@ -93,7 +98,7 @@ function! s:highlight(group, fg, bg, attr)
     \. " guifg=" . g:darkula_color_map[a:fg]
     \. " guibg=" . g:darkula_color_map[a:bg]
     \. " gui="   . a:attr
-    \. " guisp=NONE"
+    \. " guisp=" . l:sp
 endfunction
 
 " Basic Highlighting
