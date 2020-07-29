@@ -134,50 +134,53 @@ function! s:setup()
     let g:darkula_buf_bg = "black"
     let g:darkula_buf_fg = "lighter_grey"
     let g:darkula_focus_bg = "darker_grey"
+    let g:darkula_focus_fg = "light_grey"
     let g:darkula_ui_bg = "darker_grey"
   elseif g:darkula_level == 1
     let g:darkula_buf_bg = "darker_grey"
     let g:darkula_buf_fg = "dark_white"
     let g:darkula_focus_bg = "dark_grey"
+    let g:darkula_focus_fg = "lighter_grey"
     let g:darkula_ui_bg = "dark_grey"
   else " if g:darkula_level == 2
     let g:darkula_buf_bg = "dark_grey"
     let g:darkula_buf_fg = "white"
     let g:darkula_focus_bg = "grey"
+    let g:darkula_focus_fg = "dark_white"
     let g:darkula_ui_bg = "grey"
   endif
 
 " General
-call s:highlight("Normal",      g:darkula_buf_fg,  g:darkula_buf_bg,  "NONE")
-call s:highlight("NonText",     g:darkula_buf_bg,  "none",            "NONE")
-call s:highlight("Conceal",     "dark_grey",       "none",            "NONE")
-call s:highlight("Ignore",      "none",            "none",            "NONE")
-call s:highlight("SpecialKey",  "blue",            "none",            "NONE")
+call s:highlight("Normal",      g:darkula_buf_fg,    g:darkula_buf_bg,  "NONE")
+call s:highlight("NonText",     g:darkula_buf_bg,    "none",            "NONE")
+call s:highlight("Conceal",     g:darkula_focus_bg,  "none",            "NONE")
+call s:highlight("Ignore",      "none",              "none",            "NONE")
+call s:highlight("SpecialKey",  "blue",              "none",            "NONE")
 
 " Cursor
-call s:highlight("Cursor",   g:darkula_focus_bg,  "blue",            "NONE")
-call s:highlight("nCursor",  g:darkula_focus_bg,  "blue",            "NONE")
-call s:highlight("lCursor",  g:darkula_focus_bg,  "bright_purple",   "NONE")
-call s:highlight("iCursor",  g:darkula_focus_bg,  "dark_sea_green",  "NONE")
-call s:highlight("rCursor",  g:darkula_focus_bg,  "red_orange",      "NONE")
-call s:highlight("vCursor",  g:darkula_focus_bg,  "yellow",          "NONE")
-call s:highlight("cCursor",  g:darkula_focus_bg,  "white",           "NONE")
+call s:highlight("Cursor",   g:darkula_focus_bg,  "blue",              "NONE")
+call s:highlight("nCursor",  g:darkula_focus_bg,  "blue",              "NONE")
+call s:highlight("lCursor",  g:darkula_focus_bg,  "bright_purple",     "NONE")
+call s:highlight("iCursor",  g:darkula_focus_bg,  "dark_sea_green",    "NONE")
+call s:highlight("rCursor",  g:darkula_focus_bg,  "red_orange",        "NONE")
+call s:highlight("vCursor",  g:darkula_focus_bg,  "yellow",            "NONE")
+call s:highlight("cCursor",  g:darkula_focus_bg,  g:darkula_focus_fg,  "NONE")
 
 call s:highlight("CursorLine",    "none",  g:darkula_focus_bg,  "NONE")
 call s:highlight("ColorColumn",   "none",  g:darkula_focus_bg,  "NONE")
 call s:highlight("CursorColumn",  "none",  g:darkula_focus_bg,  "NONE")
 
 " Windows and tabs
-call s:highlight("LineNr",        "light_grey",     g:darkula_ui_bg,     "NONE")
-call s:highlight("ModeMsg",       "light_cyan",     "none",              "NONE")
-call s:highlight("MoreMsg",       "light_cyan",     "none",              "NONE")
-call s:highlight("StatusLine",    "lighter_grey",   g:darkula_ui_bg,     "NONE")
-call s:highlight("StatusLineNC",  "lighter_grey",   g:darkula_ui_bg,     "BOLD")
-call s:highlight("TabLine",       "light_grey",     g:darkula_ui_bg,     "NONE")
-call s:highlight("TabLineFill",   "none",           "none",              "NONE")
-call s:highlight("TabLineSel",    "lighter_grey",   g:darkula_focus_bg,  "BOLD")
-call s:highlight("Title",         "none",           "none",              "NONE")
-call s:highlight("VertSplit",     g:darkula_ui_bg,  g:darkula_ui_bg,     "NONE")
+call s:highlight("LineNr",        "light_grey",        g:darkula_ui_bg,     "NONE")
+call s:highlight("ModeMsg",       "light_cyan",        "none",              "NONE")
+call s:highlight("MoreMsg",       "light_cyan",        "none",              "NONE")
+call s:highlight("StatusLine",    "lighter_grey",      g:darkula_ui_bg,     "NONE")
+call s:highlight("StatusLineNC",  "lighter_grey",      g:darkula_ui_bg,     "BOLD")
+call s:highlight("TabLine",       "light_grey",        g:darkula_ui_bg,     "NONE")
+call s:highlight("TabLineFill",   "none",              "none",              "NONE")
+call s:highlight("TabLineSel",    g:darkula_focus_fg,  g:darkula_focus_bg,  "BOLD")
+call s:highlight("Title",         "none",              "none",              "NONE")
+call s:highlight("VertSplit",     g:darkula_ui_bg,     g:darkula_ui_bg,     "NONE")
 
 " Selections and blocks
 call s:highlight("Visual",      "none",            g:darkula_focus_bg,  "NONE")
@@ -235,7 +238,7 @@ call s:highlight("NERDTreeLinkFile",    "purple",  "darker_grey",  "NONE")
 call s:highlight("NERDTreeLinkTarget",  "cyan",    "none",         "NONE")
 
 " OverLength
-call s:highlight("OverLength", "none", "grey", "NONE")
+call s:highlight("OverLength", "none", g:darkula_focus_bg, "NONE")
 
 " TrailingWhitespace
 call s:highlight("TrailingWhitespace", "none", "bright_purple", "NONE")
@@ -248,10 +251,10 @@ call s:highlight("diffAdded",    "green",  "none",  "NONE")
 call s:highlight("diffRemoved",  "red",    "none",  "NONE")
 
 " diff
-call s:highlight("DiffAdd",     "green",   g:darkula_focus_bg,  "NONE")
-call s:highlight("DiffDelete",  "red",     g:darkula_focus_bg,  "NONE")
-call s:highlight("DiffChange",  "orange",  g:darkula_focus_bg,  "NONE")
-call s:highlight("DiffText",    "white",   g:darkula_focus_bg,  "NONE")
+call s:highlight("DiffAdd",     "green",             g:darkula_focus_bg,  "NONE")
+call s:highlight("DiffDelete",  "red",               g:darkula_focus_bg,  "NONE")
+call s:highlight("DiffChange",  "orange",            g:darkula_focus_bg,  "NONE")
+call s:highlight("DiffText",    g:darkula_focus_fg,  g:darkula_focus_bg,  "NONE")
 
 " HTML
 hi link htmltagname Keyword
