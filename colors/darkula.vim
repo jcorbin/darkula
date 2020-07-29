@@ -136,18 +136,21 @@ function! s:setup()
     let g:darkula_focus_bg = "darker_grey"
     let g:darkula_focus_fg = "light_grey"
     let g:darkula_ui_bg = "darker_grey"
+    let g:darkula_ui_fg = "lighter_grey"
   elseif g:darkula_level == 1
     let g:darkula_buf_bg = "darker_grey"
     let g:darkula_buf_fg = "dark_white"
     let g:darkula_focus_bg = "dark_grey"
     let g:darkula_focus_fg = "lighter_grey"
     let g:darkula_ui_bg = "dark_grey"
+    let g:darkula_ui_fg = "dark_white"
   else " if g:darkula_level == 2
     let g:darkula_buf_bg = "dark_grey"
     let g:darkula_buf_fg = "white"
     let g:darkula_focus_bg = "grey"
     let g:darkula_focus_fg = "dark_white"
     let g:darkula_ui_bg = "grey"
+    let g:darkula_ui_fg = "white"
   endif
 
 " General
@@ -171,12 +174,12 @@ call s:highlight("ColorColumn",   "none",  g:darkula_focus_bg,  "NONE")
 call s:highlight("CursorColumn",  "none",  g:darkula_focus_bg,  "NONE")
 
 " Windows and tabs
-call s:highlight("LineNr",        "light_grey",        g:darkula_ui_bg,     "NONE")
+call s:highlight("LineNr",        g:darkula_ui_fg,     g:darkula_ui_bg,     "NONE")
 call s:highlight("ModeMsg",       "light_cyan",        "none",              "NONE")
 call s:highlight("MoreMsg",       "light_cyan",        "none",              "NONE")
-call s:highlight("StatusLine",    "lighter_grey",      g:darkula_ui_bg,     "NONE")
-call s:highlight("StatusLineNC",  "lighter_grey",      g:darkula_ui_bg,     "BOLD")
-call s:highlight("TabLine",       "light_grey",        g:darkula_ui_bg,     "NONE")
+call s:highlight("StatusLine",    g:darkula_ui_fg,     g:darkula_ui_bg,     "NONE")
+call s:highlight("StatusLineNC",  g:darkula_ui_fg,     g:darkula_ui_bg,     "BOLD")
+call s:highlight("TabLine",       g:darkula_ui_fg,     g:darkula_ui_bg,     "NONE")
 call s:highlight("TabLineFill",   "none",              "none",              "NONE")
 call s:highlight("TabLineSel",    g:darkula_focus_fg,  g:darkula_focus_bg,  "BOLD")
 call s:highlight("Title",         "none",              "none",              "NONE")
@@ -186,11 +189,11 @@ call s:highlight("VertSplit",     g:darkula_ui_bg,     g:darkula_ui_bg,     "NON
 call s:highlight("Visual",      "none",            g:darkula_focus_bg,  "NONE")
 call s:highlight("VisualNOS",   "none",            g:darkula_focus_bg,  "NONE")
 call s:highlight("MatchParen",  g:darkula_buf_bg,  "orange",            "NONE")
-call s:highlight("Search",      "darker_grey",     "yellow_orange",     "NONE")
+call s:highlight("Search",      g:darkula_buf_bg,  "yellow_orange",     "NONE")
 
 " Folding
-call s:highlight("FoldColumn",  "lighter_grey",  g:darkula_ui_bg,   "NONE")
-call s:highlight("Folded",      "lighter_grey",  g:darkula_buf_bg,  "NONE")
+call s:highlight("FoldColumn",  g:darkula_ui_fg,   g:darkula_ui_bg,   "NONE")
+call s:highlight("Folded",      g:darkula_buf_fg,  g:darkula_buf_bg,  "NONE")
 
 " Menus
 call s:highlight("WildMenu",    g:darkula_ui_fg,  g:darkula_ui_bg,  "NONE")
@@ -208,9 +211,10 @@ call s:highlight("Todo",        "magenta",  "none",  "NONE")
 call s:highlight("Question",    "blue",     "none",  "NONE")
 
 " Popup menu
-call s:highlight("Pmenu",      "white",       g:darkula_ui_bg,  "NONE")
-call s:highlight("PmenuSel",   "dark_grey",   "dark_white",     "NONE")
-call s:highlight("PmenuSbar",  "dark_white",  g:darkula_ui_bg,  "NONE")
+call s:highlight("Pmenu",       g:darkula_ui_fg,  g:darkula_ui_bg,  "NONE")
+call s:highlight("PmenuSel",    g:darkula_ui_bg,  g:darkula_ui_fg,  "NONE")
+call s:highlight("PmenuSbar",   "none",           g:darkula_ui_bg,  "NONE")
+call s:highlight("PmenuThumb",  "none",           g:darkula_ui_fg,  "NONE")
 
 " Syntax
 call s:highlight("Comment",     "light_grey",      "none",  "NONE")
@@ -231,11 +235,11 @@ call s:highlight("Type",        "dark_orange",     "none",  "NONE")
 " -----------------------------------------------------------------------------
 
 " NERDTree
-call s:highlight("NERDTreeExecFile",    "red",     "darker_grey",  "NONE")
-call s:highlight("NERDTreeClosable",    "white",   "darker_grey",  "NONE")
-call s:highlight("NERDTreeOpenable",    "white",   "darker_grey",  "NONE")
-call s:highlight("NERDTreeLinkFile",    "purple",  "darker_grey",  "NONE")
-call s:highlight("NERDTreeLinkTarget",  "cyan",    "none",         "NONE")
+call s:highlight("NERDTreeExecFile",    "red",            g:darkula_ui_bg,  "NONE")
+call s:highlight("NERDTreeClosable",    g:darkula_ui_fg,  g:darkula_ui_bg,  "NONE")
+call s:highlight("NERDTreeOpenable",    g:darkula_ui_fg,  g:darkula_ui_bg,  "NONE")
+call s:highlight("NERDTreeLinkFile",    "purple",         g:darkula_ui_bg,  "NONE")
+call s:highlight("NERDTreeLinkTarget",  "cyan",           "none",           "NONE")
 
 " OverLength
 call s:highlight("OverLength", "none", g:darkula_focus_bg, "NONE")
