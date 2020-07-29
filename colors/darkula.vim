@@ -132,20 +132,23 @@ function! s:setup()
 
   if g:darkula_level == 0
     let g:darkula_buf_bg = "black"
+    let g:darkula_buf_fg = "lighter_grey"
     let g:darkula_focus_bg = "darker_grey"
     let g:darkula_ui_bg = "darker_grey"
   elseif g:darkula_level == 1
     let g:darkula_buf_bg = "darker_grey"
+    let g:darkula_buf_fg = "dark_white"
     let g:darkula_focus_bg = "dark_grey"
     let g:darkula_ui_bg = "dark_grey"
   else " if g:darkula_level == 2
     let g:darkula_buf_bg = "dark_grey"
+    let g:darkula_buf_fg = "white"
     let g:darkula_focus_bg = "grey"
     let g:darkula_ui_bg = "grey"
   endif
 
 " General
-call s:highlight("Normal",      "white",           g:darkula_buf_bg,  "NONE")
+call s:highlight("Normal",      g:darkula_buf_fg,  g:darkula_buf_bg,  "NONE")
 call s:highlight("NonText",     g:darkula_buf_bg,  "none",            "NONE")
 call s:highlight("Conceal",     "dark_grey",       "none",            "NONE")
 call s:highlight("Ignore",      "none",            "none",            "NONE")
@@ -209,10 +212,10 @@ call s:highlight("PmenuSbar",  "dark_white",  g:darkula_ui_bg,  "NONE")
 " Syntax
 call s:highlight("Comment",     "light_grey",      "none",  "NONE")
 call s:highlight("Constant",    "blue",            "none",  "NONE")
-call s:highlight("Delimiter",   "white",           "none",  "NONE")
+call s:highlight("Delimiter",   g:darkula_buf_fg,  "none",  "NONE")
 call s:highlight("Directory",   "blue",            "none",  "NONE")
 call s:highlight("Identifier",  "purple",          "none",  "NONE")
-call s:highlight("Operator",    "white",           "none",  "NONE")
+call s:highlight("Operator",    g:darkula_buf_fg,  "none",  "NONE")
 call s:highlight("PreCondit",   "yellow_orange",   "none",  "NONE")
 call s:highlight("PreProc",     "orange",          "none",  "NONE")
 call s:highlight("Special",     "red_orange",      "none",  "NONE")
@@ -238,7 +241,7 @@ call s:highlight("OverLength", "none", "grey", "NONE")
 call s:highlight("TrailingWhitespace", "none", "bright_purple", "NONE")
 
 " git commit
-call s:highlight("gitcommitSummary",  "white",  "darker_grey",  "NONE")
+call s:highlight("gitcommitSummary",  g:darkula_buf_fg,  g:darkula_buf_bg,  "NONE")
 
 " git diff
 call s:highlight("diffAdded",    "green",  "none",  "NONE")
