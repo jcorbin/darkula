@@ -145,92 +145,91 @@ function! s:setup()
   endif
 
 " General
-call s:highlight("Normal",        "white",           g:darkula_buf_bg,        "NONE")
-call s:highlight("NonText",       g:darkula_buf_bg,          "none",          "NONE")
-call s:highlight("Conceal",       "dark_grey",       "none",          "NONE")
-call s:highlight("Ignore",        "none",            "none",          "NONE")
-
-call s:highlight("SpecialKey",    "blue",            "none",          "NONE")
+call s:highlight("Normal",      "white",           g:darkula_buf_bg,  "NONE")
+call s:highlight("NonText",     g:darkula_buf_bg,  "none",            "NONE")
+call s:highlight("Conceal",     "dark_grey",       "none",            "NONE")
+call s:highlight("Ignore",      "none",            "none",            "NONE")
+call s:highlight("SpecialKey",  "blue",            "none",            "NONE")
 
 " Cursor
-call s:highlight("Cursor",        g:darkula_focus_bg,        "blue",          "NONE")
-call s:highlight("nCursor",       g:darkula_focus_bg,        "blue",          "NONE")
-call s:highlight("lCursor",       g:darkula_focus_bg,        "bright_purple", "NONE")
-call s:highlight("iCursor",       g:darkula_focus_bg,        "dark_sea_green", "NONE")
-call s:highlight("rCursor",       g:darkula_focus_bg,        "red_orange",    "NONE")
-call s:highlight("vCursor",       g:darkula_focus_bg,        "yellow",        "NONE")
-call s:highlight("cCursor",       g:darkula_focus_bg,        "white",         "NONE")
+call s:highlight("Cursor",   g:darkula_focus_bg,  "blue",            "NONE")
+call s:highlight("nCursor",  g:darkula_focus_bg,  "blue",            "NONE")
+call s:highlight("lCursor",  g:darkula_focus_bg,  "bright_purple",   "NONE")
+call s:highlight("iCursor",  g:darkula_focus_bg,  "dark_sea_green",  "NONE")
+call s:highlight("rCursor",  g:darkula_focus_bg,  "red_orange",      "NONE")
+call s:highlight("vCursor",  g:darkula_focus_bg,  "yellow",          "NONE")
+call s:highlight("cCursor",  g:darkula_focus_bg,  "white",           "NONE")
 
-call s:highlight("CursorLine",    "none",            g:darkula_focus_bg,      "NONE")
-call s:highlight("ColorColumn",   "none",            g:darkula_focus_bg,      "NONE")
-call s:highlight("CursorColumn",  "none",            g:darkula_focus_bg,      "NONE")
+call s:highlight("CursorLine",    "none",  g:darkula_focus_bg,  "NONE")
+call s:highlight("ColorColumn",   "none",  g:darkula_focus_bg,  "NONE")
+call s:highlight("CursorColumn",  "none",  g:darkula_focus_bg,  "NONE")
 
 " Windows and tabs
-call s:highlight("LineNr",        "light_grey",      g:darkula_ui_bg,         "NONE")
-call s:highlight("ModeMsg",       "light_cyan",      "none",          "NONE")
-call s:highlight("MoreMsg",       "light_cyan",      "none",          "NONE")
-call s:highlight("StatusLine",    "lighter_grey",    g:darkula_ui_bg,         "NONE")
-call s:highlight("StatusLineNC",  "lighter_grey",    g:darkula_ui_bg,         "BOLD")
-call s:highlight("TabLine",       "light_grey",      g:darkula_ui_bg,         "NONE")
-call s:highlight("TabLineFill",   "none",            "none",          "NONE")
-call s:highlight("TabLineSel",    "lighter_grey",    g:darkula_focus_bg,      "BOLD")
-call s:highlight("Title",         "none",            "none",          "NONE")
-call s:highlight("VertSplit",     g:darkula_ui_bg,           g:darkula_ui_bg,         "NONE")
+call s:highlight("LineNr",        "light_grey",     g:darkula_ui_bg,     "NONE")
+call s:highlight("ModeMsg",       "light_cyan",     "none",              "NONE")
+call s:highlight("MoreMsg",       "light_cyan",     "none",              "NONE")
+call s:highlight("StatusLine",    "lighter_grey",   g:darkula_ui_bg,     "NONE")
+call s:highlight("StatusLineNC",  "lighter_grey",   g:darkula_ui_bg,     "BOLD")
+call s:highlight("TabLine",       "light_grey",     g:darkula_ui_bg,     "NONE")
+call s:highlight("TabLineFill",   "none",           "none",              "NONE")
+call s:highlight("TabLineSel",    "lighter_grey",   g:darkula_focus_bg,  "BOLD")
+call s:highlight("Title",         "none",           "none",              "NONE")
+call s:highlight("VertSplit",     g:darkula_ui_bg,  g:darkula_ui_bg,     "NONE")
 
 " Selections and blocks
-call s:highlight("Visual",        "none",            g:darkula_focus_bg,      "NONE")
-call s:highlight("VisualNOS",     "none",            g:darkula_focus_bg,      "NONE")
-call s:highlight("MatchParen",    g:darkula_buf_bg,          "orange",        "NONE")
-call s:highlight("Search",        "darker_grey",     "yellow_orange", "NONE")
+call s:highlight("Visual",      "none",            g:darkula_focus_bg,  "NONE")
+call s:highlight("VisualNOS",   "none",            g:darkula_focus_bg,  "NONE")
+call s:highlight("MatchParen",  g:darkula_buf_bg,  "orange",            "NONE")
+call s:highlight("Search",      "darker_grey",     "yellow_orange",     "NONE")
 
 " Folding
-call s:highlight("FoldColumn",    "lighter_grey",    g:darkula_ui_bg,         "NONE")
-call s:highlight("Folded",        "lighter_grey",    g:darkula_buf_bg,        "NONE")
+call s:highlight("FoldColumn",  "lighter_grey",  g:darkula_ui_bg,   "NONE")
+call s:highlight("Folded",      "lighter_grey",  g:darkula_buf_bg,  "NONE")
 
 " Menus
-call s:highlight("WildMenu",      "white",     g:darkula_ui_bg,       "NONE")
-call s:highlight("SignColumn",    "none",      g:darkula_ui_bg,       "NONE")
+call s:highlight("WildMenu",    "white",  g:darkula_ui_bg,  "NONE")
+call s:highlight("SignColumn",  "none",   g:darkula_ui_bg,  "NONE")
 
 " Errors and warnings
-call s:highlight("Error",         "red",             "none",          "NONE")
-call s:highlight("ErrorMsg",      "red",             "none",          "NONE")
-call s:highlight("WarningMsg",    "yellow",          "none",          "NONE")
-call s:highlight("SpellBad",      "none",            "none",          "UNDERLINE")
-call s:highlight("SpellCap",      "none",            "none",          "UNDERLINE")
-call s:highlight("SpellRare",     "none",            "none",          "UNDERLINE")
-call s:highlight("SpellLocal",    "none",            "none",          "UNDERLINE")
-call s:highlight("Todo",          "magenta",         "none",          "NONE")
-call s:highlight("Question",      "blue",            "none",          "NONE")
+call s:highlight("Error",       "red",      "none",  "NONE")
+call s:highlight("ErrorMsg",    "red",      "none",  "NONE")
+call s:highlight("WarningMsg",  "yellow",   "none",  "NONE")
+call s:highlight("SpellBad",    "none",     "none",  "UNDERLINE")
+call s:highlight("SpellCap",    "none",     "none",  "UNDERLINE")
+call s:highlight("SpellRare",   "none",     "none",  "UNDERLINE")
+call s:highlight("SpellLocal",  "none",     "none",  "UNDERLINE")
+call s:highlight("Todo",        "magenta",  "none",  "NONE")
+call s:highlight("Question",    "blue",     "none",  "NONE")
 
 " Popup menu
-call s:highlight("Pmenu",         "white",         g:darkula_ui_bg,       "NONE")
-call s:highlight("PmenuSel",      "dark_grey",     "dark_white",  "NONE")
-call s:highlight("PmenuSbar",     "dark_white",    g:darkula_ui_bg,       "NONE")
+call s:highlight("Pmenu",      "white",       g:darkula_ui_bg,  "NONE")
+call s:highlight("PmenuSel",   "dark_grey",   "dark_white",     "NONE")
+call s:highlight("PmenuSbar",  "dark_white",  g:darkula_ui_bg,  "NONE")
 
 " Syntax
-call s:highlight("Comment",       "light_grey",      "none",          "NONE")
-call s:highlight("Constant",      "blue",            "none",          "NONE")
-call s:highlight("Delimiter",     "white",           "none",          "NONE")
-call s:highlight("Directory",     "blue",            "none",          "NONE")
-call s:highlight("Identifier",    "purple",          "none",          "NONE")
-call s:highlight("Operator",      "white",           "none",          "NONE")
-call s:highlight("PreCondit",     "yellow_orange",   "none",          "NONE")
-call s:highlight("PreProc",       "orange",          "none",          "NONE")
-call s:highlight("Special",       "red_orange",      "none",          "NONE")
-call s:highlight("Statement",     "orange",          "none",          "NONE")
-call s:highlight("String",        "dark_sea_green",  "none",          "NONE")
-call s:highlight("Structure",     "blue",            "none",          "NONE")
-call s:highlight("Type",          "dark_orange",     "none",          "NONE")
+call s:highlight("Comment",     "light_grey",      "none",  "NONE")
+call s:highlight("Constant",    "blue",            "none",  "NONE")
+call s:highlight("Delimiter",   "white",           "none",  "NONE")
+call s:highlight("Directory",   "blue",            "none",  "NONE")
+call s:highlight("Identifier",  "purple",          "none",  "NONE")
+call s:highlight("Operator",    "white",           "none",  "NONE")
+call s:highlight("PreCondit",   "yellow_orange",   "none",  "NONE")
+call s:highlight("PreProc",     "orange",          "none",  "NONE")
+call s:highlight("Special",     "red_orange",      "none",  "NONE")
+call s:highlight("Statement",   "orange",          "none",  "NONE")
+call s:highlight("String",      "dark_sea_green",  "none",  "NONE")
+call s:highlight("Structure",   "blue",            "none",  "NONE")
+call s:highlight("Type",        "dark_orange",     "none",  "NONE")
 
 " Special Highlighting
 " -----------------------------------------------------------------------------
 
 " NERDTree
-call s:highlight("NERDTreeExecFile",    "red",             "darker_grey",     "NONE")
-call s:highlight("NERDTreeClosable",    "white",           "darker_grey",     "NONE")
-call s:highlight("NERDTreeOpenable",    "white",           "darker_grey",     "NONE")
-call s:highlight("NERDTreeLinkFile",    "purple",          "darker_grey",     "NONE")
-call s:highlight("NERDTreeLinkTarget",  "cyan",            "none",            "NONE")
+call s:highlight("NERDTreeExecFile",    "red",     "darker_grey",  "NONE")
+call s:highlight("NERDTreeClosable",    "white",   "darker_grey",  "NONE")
+call s:highlight("NERDTreeOpenable",    "white",   "darker_grey",  "NONE")
+call s:highlight("NERDTreeLinkFile",    "purple",  "darker_grey",  "NONE")
+call s:highlight("NERDTreeLinkTarget",  "cyan",    "none",         "NONE")
 
 " OverLength
 call s:highlight("OverLength", "none", "grey", "NONE")
@@ -239,17 +238,17 @@ call s:highlight("OverLength", "none", "grey", "NONE")
 call s:highlight("TrailingWhitespace", "none", "bright_purple", "NONE")
 
 " git commit
-call s:highlight("gitcommitSummary",  "white",   "darker_grey",  "NONE")
+call s:highlight("gitcommitSummary",  "white",  "darker_grey",  "NONE")
 
 " git diff
-call s:highlight("diffAdded",         "green",   "none",         "NONE")
-call s:highlight("diffRemoved",       "red",     "none",         "NONE")
+call s:highlight("diffAdded",    "green",  "none",  "NONE")
+call s:highlight("diffRemoved",  "red",    "none",  "NONE")
 
 " diff
-call s:highlight("DiffAdd",           "green",   g:darkula_focus_bg,     "NONE")
-call s:highlight("DiffDelete",        "red",     g:darkula_focus_bg,     "NONE")
-call s:highlight("DiffChange",        "orange",  g:darkula_focus_bg,     "NONE")
-call s:highlight("DiffText",          "white",   g:darkula_focus_bg,     "NONE")
+call s:highlight("DiffAdd",     "green",   g:darkula_focus_bg,  "NONE")
+call s:highlight("DiffDelete",  "red",     g:darkula_focus_bg,  "NONE")
+call s:highlight("DiffChange",  "orange",  g:darkula_focus_bg,  "NONE")
+call s:highlight("DiffText",    "white",   g:darkula_focus_bg,  "NONE")
 
 " HTML
 hi link htmltagname Keyword
@@ -262,17 +261,17 @@ hi link htmlH5 Statement
 hi link htmlH6 Statement
 
 " Markdown
-call s:highlight("mkdURL",            "cyan",    "none",         "NONE")
-call s:highlight("mkdLink",           "none",    "none",         "BOLD")
+call s:highlight("mkdURL",   "cyan",  "none",  "NONE")
+call s:highlight("mkdLink",  "none",  "none",  "BOLD")
 
 " Startify
-call s:highlight("StartifyBracket",  "light_grey",   "none",        "NONE") " [,]                    : linked to Delimiter
-call s:highlight("StartifyNumber",   "dark_sea_green", "none",        "NONE") " the numbers between [] : linked to Number
-call s:highlight("StartifySlash",    "light_grey",   "none",        "NONE") " slashes in paths       : linked to Delimiter
+call s:highlight("StartifyBracket",  "light_grey",      "none",  "NONE")
+call s:highlight("StartifyNumber",   "dark_sea_green",  "none",  "NONE")
+call s:highlight("StartifySlash",    "light_grey",      "none",  "NONE")
 
 " Go specifics
-call s:highlight("goReceiverType", "dark_orange",   "none",      "NONE")
-call s:highlight("goArgumentType", "dark_orange",   "none",      "NONE")
+call s:highlight("goReceiverType",  "dark_orange",  "none",  "NONE")
+call s:highlight("goArgumentType",  "dark_orange",  "none",  "NONE")
 
 endfunction
 
