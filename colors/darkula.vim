@@ -130,18 +130,18 @@ command! DarkulaCycle call <sid>darkula_cycle()
 
 function! s:setup()
 
-  if g:darkula_level == 1
-    let s:buf_bg = "darker_grey"
-    let s:focus_bg = "dark_grey"
-    let s:ui_bg = "dark_grey"
-  elseif g:darkula_level == 2
-    let s:buf_bg = "dark_grey"
-    let s:focus_bg = "grey"
-    let s:ui_bg = "grey"
-  else " if g:darkula_level == 0
+  if g:darkula_level == 0
     let s:buf_bg = "black"
     let s:focus_bg = "darker_grey"
     let s:ui_bg = "darker_grey"
+  elseif g:darkula_level == 1
+    let s:buf_bg = "darker_grey"
+    let s:focus_bg = "dark_grey"
+    let s:ui_bg = "dark_grey"
+  else " if g:darkula_level == 2
+    let s:buf_bg = "dark_grey"
+    let s:focus_bg = "grey"
+    let s:ui_bg = "grey"
   endif
 
 " General
