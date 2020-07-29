@@ -137,6 +137,7 @@ function! s:setup()
     let g:darkula_focus_fg = "light_grey"
     let g:darkula_ui_bg = "darker_grey"
     let g:darkula_ui_fg = "lighter_grey"
+    let g:darkula_comment_fg = "grey"
   elseif g:darkula_level == 1
     let g:darkula_buf_bg = "darker_grey"
     let g:darkula_buf_fg = "dark_white"
@@ -144,6 +145,7 @@ function! s:setup()
     let g:darkula_focus_fg = "lighter_grey"
     let g:darkula_ui_bg = "dark_grey"
     let g:darkula_ui_fg = "dark_white"
+    let g:darkula_comment_fg = "light_grey"
   else " if g:darkula_level == 2
     let g:darkula_buf_bg = "dark_grey"
     let g:darkula_buf_fg = "white"
@@ -151,6 +153,7 @@ function! s:setup()
     let g:darkula_focus_fg = "dark_white"
     let g:darkula_ui_bg = "grey"
     let g:darkula_ui_fg = "white"
+    let g:darkula_comment_fg = "lighter_grey"
   endif
 
 " General
@@ -217,19 +220,19 @@ call s:highlight("PmenuSbar",   "none",           g:darkula_ui_bg,  "NONE")
 call s:highlight("PmenuThumb",  "none",           g:darkula_ui_fg,  "NONE")
 
 " Syntax
-call s:highlight("Comment",     "light_grey",      "none",  "NONE")
-call s:highlight("Constant",    "blue",            "none",  "NONE")
-call s:highlight("Delimiter",   g:darkula_buf_fg,  "none",  "NONE")
-call s:highlight("Directory",   "blue",            "none",  "NONE")
-call s:highlight("Identifier",  "purple",          "none",  "NONE")
-call s:highlight("Operator",    g:darkula_buf_fg,  "none",  "NONE")
-call s:highlight("PreCondit",   "yellow_orange",   "none",  "NONE")
-call s:highlight("PreProc",     "orange",          "none",  "NONE")
-call s:highlight("Special",     "red_orange",      "none",  "NONE")
-call s:highlight("Statement",   "orange",          "none",  "NONE")
-call s:highlight("String",      "dark_sea_green",  "none",  "NONE")
-call s:highlight("Structure",   "blue",            "none",  "NONE")
-call s:highlight("Type",        "dark_orange",     "none",  "NONE")
+call s:highlight("Comment",     g:darkula_comment_fg,  "none",  "NONE")
+call s:highlight("Constant",    "blue",                "none",  "NONE")
+call s:highlight("Delimiter",   g:darkula_buf_fg,      "none",  "NONE")
+call s:highlight("Directory",   "blue",                "none",  "NONE")
+call s:highlight("Identifier",  "purple",              "none",  "NONE")
+call s:highlight("Operator",    g:darkula_buf_fg,      "none",  "NONE")
+call s:highlight("PreCondit",   "yellow_orange",       "none",  "NONE")
+call s:highlight("PreProc",     "orange",              "none",  "NONE")
+call s:highlight("Special",     "red_orange",          "none",  "NONE")
+call s:highlight("Statement",   "orange",              "none",  "NONE")
+call s:highlight("String",      "dark_sea_green",      "none",  "NONE")
+call s:highlight("Structure",   "blue",                "none",  "NONE")
+call s:highlight("Type",        "dark_orange",         "none",  "NONE")
 
 " Special Highlighting
 " -----------------------------------------------------------------------------
@@ -275,9 +278,9 @@ call s:highlight("mkdURL",   "cyan",  "none",  "NONE")
 call s:highlight("mkdLink",  "none",  "none",  "BOLD")
 
 " Startify
-call s:highlight("StartifyBracket",  "light_grey",      "none",  "NONE")
-call s:highlight("StartifyNumber",   "dark_sea_green",  "none",  "NONE")
-call s:highlight("StartifySlash",    "light_grey",      "none",  "NONE")
+call s:highlight("StartifyBracket",  g:darkula_comment_fg,  "none",  "NONE")
+call s:highlight("StartifyNumber",   "dark_sea_green",      "none",  "NONE")
+call s:highlight("StartifySlash",    g:darkula_comment_fg,  "none",  "NONE")
 
 " Go specifics
 call s:highlight("goReceiverType",  "dark_orange",  "none",  "NONE")
