@@ -1,41 +1,21 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-if g:darkula_level == 1
-  let s:buf_bg = "darker_grey"
-  let s:focus_bg = "dark_grey"
-  let s:ui_bg = "dark_grey"
-  let s:ui_fg = "dark_white"
-  let s:ui_nc = "lighter_grey"
-elseif g:darkula_level == 2
-  let s:buf_bg = "dark_grey"
-  let s:focus_bg = "grey"
-  let s:ui_bg = "grey"
-  let s:ui_fg = "white"
-  let s:ui_nc = "lighter_grey"
-else " if g:darkula_level == 0
-  let s:buf_bg = "black"
-  let s:focus_bg = "darker_grey"
-  let s:ui_bg = "darker_grey"
-  let s:ui_fg = "lighter_grey"
-  let s:ui_nc = "grey"
-endif
-
 function! s:ui_color(fg)
-  return [g:darkula_color_map[a:fg], g:darkula_color_map[s:ui_bg], "NONE", "NONE"]
+  return [g:darkula_color_map[a:fg], g:darkula_color_map[g:darkula_ui_bg], "NONE", "NONE"]
 endfunction
 
 function! s:ui_inv_color(fg)
-  return [g:darkula_color_map[s:ui_bg], g:darkula_color_map[a:fg], "NONE", "NONE"]
+  return [g:darkula_color_map[g:darkula_ui_bg], g:darkula_color_map[a:fg], "NONE", "NONE"]
 endfunction
 
 function! s:build_palette() abort
-  let col_base = s:ui_color(s:ui_fg)
+  let col_base = s:ui_color(g:darkula_ui_fg)
 
   let p = {}
 
-  let col_inactive = s:ui_color(s:ui_nc)
-  let col_invis = s:ui_color(s:ui_bg)
+  let col_inactive = s:ui_color(g:darkula_focus_fg)
+  let col_invis = s:ui_color(g:darkula_ui_bg)
   let p.inactive = airline#themes#generate_color_map(
         \ col_inactive,
         \ col_inactive,
@@ -77,7 +57,7 @@ function! s:build_palette() abort
         \ "yellow": s:ui_color("yellow"),
         \ "orange": s:ui_color("yellow_orange"),
         \ "purple": s:ui_color("purple"),
-        \ "none": s:ui_color(s:ui_fg),
+        \ "none": s:ui_color(g:darkula_ui_fg),
         \ }
 
   " Error
