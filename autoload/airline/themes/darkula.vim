@@ -22,11 +22,11 @@ else " if g:darkula_level == 0
 endif
 
 function! s:ui_color(fg)
-  return [g:darkula_color_map[a:fg], g:darkula_color_map[s:ui_bg], g:darkula_term_color_map[a:fg], g:darkula_term_color_map[s:ui_bg]]
+  return [g:darkula_color_map[a:fg], g:darkula_color_map[s:ui_bg], "NONE", "NONE"]
 endfunction
 
 function! s:ui_inv_color(fg)
-  return [g:darkula_color_map[s:ui_bg], g:darkula_color_map[a:fg], g:darkula_term_color_map[s:ui_bg], g:darkula_term_color_map[a:fg]]
+  return [g:darkula_color_map[s:ui_bg], g:darkula_color_map[a:fg], "NONE", "NONE"]
 endfunction
 
 function! s:build_palette() abort

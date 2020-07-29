@@ -37,31 +37,6 @@ let g:darkula_color_map.red_orange     = "#af5f5f"
 let g:darkula_color_map.yellow         = "#808000"
 let g:darkula_color_map.yellow_orange  = "#d7af00"
 
-let g:darkula_term_color_map = {}
-let g:darkula_term_color_map.none           = "NONE"
-let g:darkula_term_color_map.black          = 0
-let g:darkula_term_color_map.darker_grey    = 233
-let g:darkula_term_color_map.dark_grey      = 235
-let g:darkula_term_color_map.grey           = 238
-let g:darkula_term_color_map.light_grey     = 240
-let g:darkula_term_color_map.lighter_grey   = 242
-let g:darkula_term_color_map.white          = 7
-let g:darkula_term_color_map.dark_white     = 247
-let g:darkula_term_color_map.blue           = 67
-let g:darkula_term_color_map.bright_purple  = 57
-let g:darkula_term_color_map.cyan           = 44
-let g:darkula_term_color_map.dark_orange    = 130
-let g:darkula_term_color_map.dark_sea_green = 65
-let g:darkula_term_color_map.green          = 34
-let g:darkula_term_color_map.light_cyan     = 73
-let g:darkula_term_color_map.magenta        = 198
-let g:darkula_term_color_map.orange         = 172
-let g:darkula_term_color_map.purple         = 103
-let g:darkula_term_color_map.red            = 160
-let g:darkula_term_color_map.red_orange     = 131
-let g:darkula_term_color_map.yellow         = 226
-let g:darkula_term_color_map.yellow_orange  = 178
-
 " Neovim terminal
 " -----------------------------------------------------------------------------
 "
@@ -92,9 +67,7 @@ function! s:highlight(group, fg, bg, attr, ...)
     let l:sp = "NONE"
   endif
   exec "highlight! " . a:group
-    \. " ctermfg=" . g:darkula_term_color_map[a:fg]
-    \. " ctermbg=" . g:darkula_term_color_map[a:bg]
-    \. " cterm=" . a:attr
+    \. " ctermfg=NONE ctermbg=NONE cterm=NONE"
     \. " guifg=" . g:darkula_color_map[a:fg]
     \. " guibg=" . g:darkula_color_map[a:bg]
     \. " gui="   . a:attr
