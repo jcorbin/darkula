@@ -2,11 +2,19 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! s:ui_color(fg)
-  return [g:darkula_color_map[a:fg], g:darkula_color_map[g:darkula_ui_bg], "NONE", "NONE"]
+  return [
+    \ g:darkula_color_map[a:fg],
+    \ g:darkula_color_map[g:darkula_ui_bg],
+    \ "NONE",
+    \ "NONE" ]
 endfunction
 
 function! s:ui_inv_color(fg)
-  return [g:darkula_color_map[g:darkula_ui_bg], g:darkula_color_map[a:fg], "NONE", "NONE"]
+  return [
+    \ g:darkula_color_map[g:darkula_ui_bg],
+    \ g:darkula_color_map[a:fg],
+    \ "NONE",
+    \ "NONE" ]
 endfunction
 
 function! s:build_palette() abort
@@ -23,7 +31,7 @@ function! s:build_palette() abort
         \ col_invis,
         \ col_invis,
         \ col_invis,
-        \)
+        \ )
 
   let p.normal = airline#themes#generate_color_map(
         \ s:ui_inv_color("blue"),
