@@ -173,8 +173,8 @@ call s:highlight("MatchParen",  g:darkula_buf_bg,  "orange",            "NONE")
 call s:highlight("Search",      g:darkula_buf_bg,  "yellow_orange",     "NONE")
 
 " Folding
-call s:highlight("FoldColumn",  g:darkula_ui_fg,   g:darkula_ui_bg,   "NONE")
-call s:highlight("Folded",      g:darkula_buf_fg,  g:darkula_buf_bg,  "NONE")
+call s:highlight("FoldColumn",  g:darkula_ui_fg,       g:darkula_ui_bg,   "NONE")
+call s:highlight("Folded",      g:darkula_comment_fg,  g:darkula_buf_bg,  "NONE")
 
 " Menus
 call s:highlight("WildMenu",    g:darkula_ui_fg,  g:darkula_ui_bg,  "NONE")
