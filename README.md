@@ -13,11 +13,20 @@ These level may be easily cycled using the `:DarkulaCycle` command.
 
 ## Samples
 
-> ![Preview of Darkula](images/darkula.png)
-Screenshot of darker mode (level 1) on a simple Go source.
+### Level 0: Darkula Black
 
 > ![Preview of Darkula Black Mode](images/darkula_black.png)
 Screenshot of dark mode (level 0) on a simple Go source.
+
+### Level 1: Darkula -- the default
+
+> ![Preview of Darkula](images/darkula.png)
+Screenshot of darker mode (level 1) on a simple Go source.
+
+### Level 2: Darkula Grey
+
+> ![Preview of Darkula Black Mode](images/darkula_grey.png)
+Screenshot of dark mode (level 2) on a simple Go source.
 
 ## Lineage
 
