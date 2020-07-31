@@ -38,9 +38,12 @@ Screenshot of dark mode (level 2) on a simple Go source.
 
 ![Bad Spelling Sample](images/spelbad.png)
 
+Requires a terminal like [kitty][kitty_underlines] or a gui.
+
 ### Modal cursor highlights, matched to airline
 
 ![guicursor sample](images/cursors.png)
+
 Requires a [`'guicursor'`][opt_guicursor] setting like:
 ```vim
 set guicursor
@@ -59,6 +62,7 @@ set guicursor
 - originally Forked from [isobit/vim-darcula-colors][vim-darcula]
 - with some philosophical inspiration from [iceberg][iceberg]
 
+[kitty_underlines]: https://sw.kovidgoyal.net/kitty/protocol-extensions.html#colored-and-styled-underlines
 [opt_guicursor]: https://neovim.io/doc/user/options.html#'guicursor'
 [vim-darcula]: //github.com/isobit/vim-darcula-colors
 [iceberg]: //github.com/cocopon/iceberg.vim
