@@ -28,12 +28,38 @@ Screenshot of darker mode (level 1) on a simple Go source.
 > ![Preview of Darkula Black Mode](images/darkula_grey.png)
 Screenshot of dark mode (level 2) on a simple Go source.
 
+## Features
+
+### Airline theme
+
+![Airline Samples](images/airlines.png)
+
+### Subtle Undercurl for spelling
+
+![Bad Spelling Sample](images/spelbad.png)
+
+### Modal cursor highlights, matched to airline
+
+![guicursor sample](images/cursors.png)
+Requires a [`'guicursor'`][opt_guicursor] setting like:
+```vim
+set guicursor
+  \=a:block
+  \,n:nCursor
+  \,c:cCursor
+  \,v:vCursor
+  \,i-ci-ve:ver25-iCursor
+  \,r-cr:hor25-rCursor
+  \,o:hor50-nCursor
+```
+
 ## Lineage
 
 - [Intellij's Darcula][darcula] theme
 - originally Forked from [isobit/vim-darcula-colors][vim-darcula]
 - with some philosophical inspiration from [iceberg][iceberg]
 
+[opt_guicursor]: https://neovim.io/doc/user/options.html#'guicursor'
 [vim-darcula]: //github.com/isobit/vim-darcula-colors
 [iceberg]: //github.com/cocopon/iceberg.vim
 [darcula]: //plugins.jetbrains.com/plugin/12692-darcula-darker-theme
