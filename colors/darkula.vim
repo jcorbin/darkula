@@ -119,6 +119,9 @@ function! s:darkula_cycle()
   else
     let g:darkula_level = 0
   endif
+endfunction
+
+function! s:refresh()
   call s:setup()
   if exists("g:airline_theme") && g:airline_theme == "darkula"
     call airline#switch_theme("darkula")
