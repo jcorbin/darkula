@@ -28,6 +28,45 @@ Screenshot of darker mode (level 1) on a simple Go source.
 > ![Preview of Darkula Black Mode](images/darkula_grey.png)
 Screenshot of dark mode (level 2) on a simple Go source.
 
+## Variable Emphasis for Searches, Matches, References, etc
+
+Provides 4 levels of increasing emphasis for things like:
+- search highlights ala [`'hlsearch'`](https://neovim.io/doc/user/options.html#'hlsearch')
+- matching parens from the standard [`matchparen` plugin](https://neovim.io/doc/user/pi_paren.html)
+- LSP references and diagnostics for Neovim's builtin [LSP framework](https://neovim.io/doc/user/lsp.html)
+
+The level of emphasis may be set via `g:darkula_emphasis` and easily cycled
+with the `:DarkulaEmphasisCycle` command.
+
+The levels are, in decreasing order of emphasis:
+
+### Level 3: background color (aka inverted video effect)
+
+![Darkula Emphasis 3: background color](images/emph_3.png)
+
+Showing:
+- `hlsearch` for "hello"
+- LSP reference for the `http` package, which is the symbol the cursor is on line 24
+- LSP diagnostic error error on line 24, the virtual text style follows the emphasis level
+
+### Level 2: foreground color
+
+![Darkula Emphasis 2: foreground color](images/emph_2.png)
+
+Same sate as above, only the emphasis level has changed.
+
+### Level 1: lighter background with a colored undercurl
+
+![Darkula Emphasis 1: grey w/ undercurl](images/emph_1.png)
+
+Same sate as above, only the emphasis level has changed.
+
+### Level 0: just colored undercurl
+
+![Darkula Emphasis 0: just undercurl](images/emph_0.png)
+
+Same sate as above, only the emphasis level has changed.
+
 ## Features
 
 ### Airline theme
