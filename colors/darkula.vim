@@ -74,6 +74,10 @@ function! s:highlight(group, fg, bg, attr, ...)
     \. " guisp=" . l:sp
 endfunction
 
+function! s:highlight_ref(group, color)
+  call s:highlight(a:group, g:darkula_buf_bg, a:color, "NONE")
+endfunction
+
 " Basic Highlighting
 " -----------------------------------------------------------------------------
 
@@ -167,10 +171,10 @@ call s:highlight("Title",         "none",              "none",              "NON
 call s:highlight("VertSplit",     g:darkula_ui_bg,     g:darkula_ui_bg,     "NONE")
 
 " Selections and blocks
-call s:highlight("Visual",      "none",            g:darkula_focus_bg,  "NONE")
-call s:highlight("VisualNOS",   "none",            g:darkula_focus_bg,  "NONE")
-call s:highlight("MatchParen",  g:darkula_buf_bg,  "orange",            "NONE")
-call s:highlight("Search",      g:darkula_buf_bg,  "yellow_orange",     "NONE")
+call s:highlight("Visual",          "none",            g:darkula_focus_bg,  "NONE")
+call s:highlight("VisualNOS",       "none",            g:darkula_focus_bg,  "NONE")
+call s:highlight_ref("MatchParen",  "orange")
+call s:highlight_ref("Search",      "yellow_orange")
 
 " Folding
 call s:highlight("FoldColumn",  g:darkula_ui_fg,       g:darkula_ui_bg,   "NONE")
