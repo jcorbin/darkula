@@ -223,12 +223,14 @@ call s:highlight("SignColumn",  "none",           g:darkula_ui_bg,  "NONE")
 call s:highlight("Error",       "red",      "none",  "NONE")
 call s:highlight("ErrorMsg",    "red",      "none",  "NONE")
 call s:highlight("WarningMsg",  "yellow",   "none",  "NONE")
+call s:highlight("Todo",        "magenta",  "none",  "NONE")
+call s:highlight("Question",    "blue",     "none",  "NONE")
+
+" Spelling
 call s:highlight("SpellBad",    "none",     "none",  "UNDERCURL",  g:darkula_comment_fg)
 call s:highlight("SpellCap",    "none",     "none",  "UNDERCURL",  g:darkula_comment_fg)
 call s:highlight("SpellRare",   "none",     "none",  "ITALIC")
 call s:highlight("SpellLocal",  "none",     "none",  "ITALIC")
-call s:highlight("Todo",        "magenta",  "none",  "NONE")
-call s:highlight("Question",    "blue",     "none",  "NONE")
 
 " Popup menu
 call s:highlight("Pmenu",       g:darkula_ui_fg,  g:darkula_ui_bg,  "NONE")
