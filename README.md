@@ -4,30 +4,6 @@ Vim colors inspired by [Intellij IDEA's Darcula][darcula] theme, but darker! It 
 same palette, but makes slightly different choices about which colors to use
 where.
 
-Actually, it includes 3 levels of brightness, controlled by `g:darkula_level`:
-- level 0 uses a hard black background
-- level 1 uses a darker grey background, this is the default
-- level 2 uses a dark grey background
-
-These level may be easily cycled using the `:DarkulaCycle` command.
-
-## Samples
-
-### Level 0: Darkula Black
-
-> ![Preview of Darkula Black Mode](images/darkula_black.png)
-Screenshot of dark mode (level 0) on a simple Go source.
-
-### Level 1: Darkula -- the default
-
-> ![Preview of Darkula](images/darkula.png)
-Screenshot of darker mode (level 1) on a simple Go source.
-
-### Level 2: Darkula Grey
-
-> ![Preview of Darkula Black Mode](images/darkula_grey.png)
-Screenshot of dark mode (level 2) on a simple Go source.
-
 ## Variable Emphasis for Searches, Matches, References, etc
 
 Provides 4 levels of increasing emphasis for things like:
@@ -67,19 +43,13 @@ Same sate as above, only the emphasis level has changed.
 
 Same sate as above, only the emphasis level has changed.
 
-## Features
-
-### Airline theme
-
-![Airline Samples](images/airlines.png)
-
-### Subtle Undercurl for spelling
+## Subtle Undercurl for spelling
 
 ![Bad Spelling Sample](images/spelbad.png)
 
 Requires a terminal like [kitty][kitty_underlines] or a gui.
 
-### Modal cursor highlights, matched to airline
+## Modal cursor highlights, matched to airline
 
 ![guicursor sample](images/cursors.png)
 
@@ -94,6 +64,34 @@ set guicursor
   \,r-cr:hor25-rCursor
   \,o:hor50-nCursor
 ```
+
+## Airline theme
+
+![Airline Samples](images/airlines.png)
+
+## Variable Level Of Darkness
+
+Actually, it includes 3 levels of brightness, controlled by `g:darkula_level`:
+- level 0 uses a hard black background
+- level 1 uses a darker grey background, this is the default
+- level 2 uses a dark grey background
+
+These level may be easily cycled using the `:DarkulaCycle` command.
+
+### Level 0: Darkula Black
+
+> ![Preview of Darkula Black Mode](images/darkula_black.png)
+Screenshot of dark mode (level 0) on a simple Go source.
+
+### Level 1: Darkula -- the default
+
+> ![Preview of Darkula](images/darkula.png)
+Screenshot of darker mode (level 1) on a simple Go source.
+
+### Level 2: Darkula Grey
+
+> ![Preview of Darkula Black Mode](images/darkula_grey.png)
+Screenshot of dark mode (level 2) on a simple Go source.
 
 ## Lineage
 
