@@ -74,8 +74,21 @@ function! s:highlight(group, fg, bg, attr, ...)
     \. " guisp=" . l:sp
 endfunction
 
-function! s:highlight_ref(group, color)
-  call s:highlight(a:group, g:darkula_buf_bg, a:color, "NONE")
+function! s:highlight_ref(group, color, ...)
+  if a:0 > 0
+    let l:level = a:1
+  else
+    let l:level = g:darkula_emphasis
+  endif
+  if l:level == 0
+    call s:highlight(a:group, "none", "none", "UNDERCURL", a:color)
+  elseif l:level == 1
+    call s:highlight(a:group, "none", g:darkula_focus_bg, "UNDERCURL", a:color)
+  elseif l:level == 2
+    call s:highlight(a:group, a:color, g:darkula_buf_bg, "NONE")
+  else
+    call s:highlight(a:group, g:darkula_buf_bg, a:color, "NONE")
+  endif
 endfunction
 
 " Basic Highlighting
@@ -92,6 +105,10 @@ endif
 
 if !exists("g:darkula_level")
   let g:darkula_level = 1
+endif
+
+if !exists("g:darkula_emphasis")
+  let g:darkula_emphasis = 2
 endif
 
 function! s:darkula_cycle()
