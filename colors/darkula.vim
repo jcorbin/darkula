@@ -111,6 +111,19 @@ if !exists("g:darkula_emphasis")
   let g:darkula_emphasis = 2
 endif
 
+function! s:darkula_emphasis_cycle()
+  if g:darkula_emphasis == 0
+    let g:darkula_emphasis = 1
+  elseif g:darkula_emphasis == 1
+    let g:darkula_emphasis = 2
+  elseif g:darkula_emphasis == 2
+    let g:darkula_emphasis = 3
+  else
+    let g:darkula_emphasis = 0
+  endif
+  call s:refresh()
+endfunction
+
 function! s:darkula_cycle()
   if g:darkula_level == 0
     let g:darkula_level = 1
@@ -119,6 +132,7 @@ function! s:darkula_cycle()
   else
     let g:darkula_level = 0
   endif
+  call s:refresh()
 endfunction
 
 function! s:refresh()
@@ -129,6 +143,7 @@ function! s:refresh()
 endfunction
 
 command! DarkulaCycle call <sid>darkula_cycle()
+command! DarkulaEmphasisCycle call <sid>darkula_emphasis_cycle()
 
 function! s:setup()
 
