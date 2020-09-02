@@ -332,6 +332,15 @@ call s:highlight("StartifySlash",    g:darkula_comment_fg,  "none",  "NONE")
 call s:highlight("goReceiverType",  "dark_orange",  "none",  "NONE")
 call s:highlight("goArgumentType",  "dark_orange",  "none",  "NONE")
 
+" vimoxide/quick-scope
+if exists("g:darkula_oxide_level")
+  let l:oxide_level = g:darkula_oxide_level
+else
+  let l:oxide_level = 3
+endif
+call s:highlight_ref("QuickScopePrimary",    "green",  l:oxide_level)
+call s:highlight_ref("QuickScopeSecondary",  "cyan",   l:oxide_level)
+
 endfunction
 
 call s:setup()
