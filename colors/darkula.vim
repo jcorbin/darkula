@@ -233,6 +233,33 @@ call s:highlight("String",      "dark_sea_green",      "none",  "NONE")
 call s:highlight("Structure",   "blue",                "none",  "NONE")
 call s:highlight("Type",        "dark_orange",         "none",  "NONE")
 
+" Neovim LSP
+
+" each diagnostic has 3 highlights:
+" 1. virtual text
+" 2. signs in sign column
+" 3. messages in the diagnostics float
+
+call s:highlight_ref("LspDiagnosticsError",      "red_orange")
+call s:highlight("LspDiagnosticsErrorSign",      "red_orange",   g:darkula_ui_bg,  "NONE")
+call s:highlight("LspDiagnosticsErrorFloating",  "red_orange",   "none",           "NONE")
+
+call s:highlight_ref("LspDiagnosticsWarning",      "yellow")
+call s:highlight("LspDiagnosticsWarningSign",      "yellow",   g:darkula_ui_bg,  "NONE")
+call s:highlight("LspDiagnosticsWarningFloating",  "yellow",   "none",           "NONE")
+
+call s:highlight_ref("LspDiagnosticsInformation",      "green")
+call s:highlight("LspDiagnosticsInformationSign",      "green",   g:darkula_ui_bg,  "NONE")
+call s:highlight("LspDiagnosticsInformationFloating",  "green",   "none",           "NONE")
+
+call s:highlight_ref("LspDiagnosticsHint",      "blue")
+call s:highlight("LspDiagnosticsHintSign",      "blue",   g:darkula_ui_bg,  "NONE")
+call s:highlight("LspDiagnosticsHintFloating",  "blue",   "none",           "NONE")
+
+call s:highlight_ref("LspReferenceText",   "orange")
+call s:highlight_ref("LspReferenceRead",   "blue")
+call s:highlight_ref("LspReferenceWrite",  "cyan")
+
 " Special Highlighting
 " -----------------------------------------------------------------------------
 
